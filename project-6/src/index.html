@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fine Pieces of Talavera pottery</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">Authentic Talavera pottery</h1>
+        <hr>
+        <p style="text-align: center;">Prove the authenticity of a piece of Talavera pottery using the Ethereum blockchain.</p>
+    </div>
+
+    <div id="ftc-create">
+        <h2>Product Overview</h2>
+        <div class="form-group">
+            SKU
+            <br>
+            <input class="input-field" type="number" id="sku" name="sku" value=1><br>
+            UPC
+            <br>
+            <input type="number" id="upc" name="upc" value=1><br>
+            Current Owner ID
+            <br>
+            <input type="text" id="ownerID" name="ownerID" value="0x963865f57804b38459dd4b2da2f760211a200438" size="50"><br>
+            <div class=button-div>
+                <button class="btn-fetchOne" id="button" type="button" data-id="7">Fetch Data 1</button>
+                <button class="btn-fetchTwo" id="button" type="button" data-id="8">Fetch Data 2</button>
+            </div>
+        </div>
+        <div class=form-break></div>
+        <h2>Workshop Details</h2>
+        <div class="form-group">
+            Workshop ID
+            <br>
+            <input type="text" id="originWorkshopID" name="originWorkshopID" size="50" value="0x7577b6079c6639cd1f39b8bb050511a3ff7a5550">
+            <button class="btn-addworkshop" id="button" type="button" data-id="9">Add Workshop</button><br>
+            Workshop Name
+            <br>
+            <input type="text" id="originWorkshopName" name="originWorkshopName" value="Taller Uriarte Talavera"><br>
+            <br>
+            <button class="btn-create" id="button" type="button" data-id="1">Create</button>
+            <button class="btn-store" id="button" type="button" data-id="2">Store</button>
+            <button class="btn-ship" id="button" type="button" data-id="3">Ship</button>
+        </div>
+        <div class=form-break></div>
+        <h2>Product Details</h2>
+        <div class="form-group">
+            Product Notes
+            <br>
+            <input type="text" id="productNotes" name="productNotes" value="Talavera vase decorated" size="60"><br>
+            Product Price
+            <br>
+            <input type="number" id="productPrice" name="productPrice" value=1>ETH<br>
+            Retailer ID
+            <br>
+            <input type="text" id="retailerID" name="retailerID" value="0x0fb2bfefd526966c87efa19f6693d50971763fc2"
+                size="50"><button class="btn-addretailer" id="button" type="button" data-id="10">Add Retailer</button><br>
+            Customer ID
+            <br>
+            <input type="text" id="customerID" name="customerID" value="0x5d777e9127b28fb119e81a6304278a0a21bef1c4"
+                size="50"><button class="btn-addcustomer" id="button" type="button" data-id="11">Add Customer</button><br>
+            <br>
+            <button class="btn-receive" id="button" type="button" data-id="4">Receive</button>
+            <button class="btn-forsale" id="button" type="button" data-id="5">ForSale</button>
+            <button class="btn-buy" id="button" type="button" data-id="6">Buy</button>
+            <!--
+                <button class="btn-ship" id="button" type="button" data-id="6">Ship</button>
+                <button class="btn-purchase" id="button" type="button" data-id="8">Purchase</button>
+            -->
+        </div>
+        <div class=form-break></div>
+        <hr>
+    </div>
+
+    <h2>Transaction History<span id="ftc-history"></span></h2>
+    <div>
+        <ul id="ftc-events">
+            <!-- Events will appear here from app.js -->
+        </ul>
+        <br>
+        <hr>
+    </div>
+
+    <h2>Output<span id="ftc-output"></span></h2>
+    <div id="ftc-item">
+        <br>
+        <hr>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
